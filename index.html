@@ -16,11 +16,15 @@
 
             <modal v-if="showModal" @close="showModal = false">
 
-                <p> aloha mi amigos </p>
+              <form action="upload.php" method="post" enctype="multipart/form-data">
+                Select image to upload:
+                <input type="file" name="fileToUpload" id="fileToUpload">
+                <input type="submit" value="Upload Image" name="submit">
+              </form>
 
             </modal>
 
-            <button @click="showModal = true">Show modal</button>
+            <button @click="showModal = true">Add Files</button>
 
         </div>
 
